@@ -1,0 +1,405 @@
+@charset "UTF-8";
+/*Mapas (grupo de variables al cual podemos acceder) --> Accedemos a ellos con la propiedad map-get, seguido del nombre del mapa y su valor*/
+/*Extend (conjunto de variables) --> Accedemos a ellos importándolos con @(nombre del extend)*/
+.servicio h1, .servicio__seccion p, .mapa h1, .locales h1, .recetas h1, .recetas__seccion, .formulario__seccion h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Mixin (conjunto de variables vacias que podemos declarar al momento de necesitarlas agregando su valor) --> llamamos al mixin con @include
++ nombre del mixin + los valores que queramos pasar) */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Albra Sans',Georgia,sans-serif;
+  font-weight: bold;
+  background-color: #e6e6e6;
+  width: auto;
+  height: auto;
+}
+
+/* Header, logo, barra de navegación y sus estilos */
+header {
+  /*He puesto una navbar con Bootstrap. Por esa misma razón no pude realizar nesting por temor a modificar las clases
+    y que las mismas pierdan sus propiedades*/
+}
+
+header .navbar {
+  position: relative;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+header .navbar .btn-outline-success {
+  color: #a2c6f8;
+  border-color: #284268;
+}
+
+header .navbar-light .navbar-nav .nav-link.active {
+  color: #a2c6f8;
+}
+
+header .navbar-light .navbar-nav .nav-link.active .navbar-nav .nav-link {
+  color: black;
+}
+
+header .navbar-light .navbar-nav .nav-link.active .navbar-toggler {
+  color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+
+/* Index, su sección y contenido */
+.inicio__seccion {
+  text-align: center;
+  margin: 40px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inicio__seccion__bienvenida h1 {
+  padding: 10px;
+  font-size: 30px;
+}
+
+.inicio__seccion__bienvenida span {
+  color: #a2c6f8;
+  background-color: black;
+  border-radius: 35px;
+  padding: 7px 12px 7px 12px;
+}
+
+.inicio__seccion__bienvenida p {
+  margin: 20px;
+  font-size: 30px;
+}
+
+.inicio__seccion__video--tamanio {
+  max-width: 400px;
+  max-height: 200px;
+}
+
+/* Página servicio */
+.servicio h1 {
+  border: 1px solid black;
+  margin: 20px;
+  background-color: #a2c6f8;
+}
+
+.servicio__seccion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.servicio__seccion__imagenes {
+  margin: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+.servicio__seccion__imagenes img {
+  padding: 15px;
+  width: 250px;
+  height: 250px;
+  border-radius: 30px;
+}
+
+/* Página mapa */
+.mapa h1 {
+  border: 1px solid black;
+  margin: 20px;
+  background-color: #a2c6f8;
+}
+
+.mapa__seccion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.mapa__seccion__mapa--tamanio {
+  width: 1200px;
+  height: 500px;
+}
+
+/* Página locales */
+.locales h1 {
+  border: 1px solid black;
+  margin: 20px;
+  background-color: #a2c6f8;
+}
+
+.card {
+  background-color: #b9ccf7;
+  margin-top: 10px;
+}
+
+.articulo-locales-suramerica, .articulo-locales-europa, .articulo-locales-asia {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Página recetas */
+.recetas h1 {
+  border: 1px solid black;
+  margin: 20px;
+  background-color: #a2c6f8;
+}
+
+.recetas__seccion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* Página contacto */
+.formulario__seccion {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formulario__seccion h1 {
+  border: 1px solid black;
+  margin: 20px;
+  background-color: #a2c6f8;
+}
+
+.formulario__seccion__form form {
+  width: 450px;
+  margin: auto;
+  background: #a2c6f8;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 20px;
+  border-radius: 7px;
+}
+
+.formulario__seccion__form form input, .formulario__seccion__form form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 7px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 13px;
+  border: none;
+}
+
+.formulario__seccion__form form textarea {
+  min-height: 400px;
+  max-height: 200px;
+  max-width: 100%;
+}
+
+.formulario__seccion__form form #submit {
+  background-color: black;
+  color: #e6e6e6;
+  padding: 20px;
+}
+
+.formulario__seccion__form form #submit:hover {
+  cursor: pointer;
+}
+
+.formulario__seccion .redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+  text-align: center;
+}
+
+.formulario__seccion .redes_logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.formulario__seccion .redes_logos img {
+  max-width: 50px;
+  max-height: 50px;
+  padding: 5px;
+}
+
+footer {
+  background-color: black;
+  padding: 10px;
+}
+
+footer p {
+  text-align: center;
+  padding: 20px;
+  font-size: 10px;
+  color: #ffffff;
+}
+
+@media (max-width: 1000px) {
+  /* Servicio */
+  .servicio__seccion__imagenes {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  /* Mapa */
+  .mapa__seccion__mapa--tamanio {
+    width: 600px;
+    height: 700px;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Index */
+  .inicio__seccion {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .inicio__seccion__video {
+    width: 100%;
+    height: 100%;
+  }
+  /* Servicio */
+  .servicio__seccion__imagenes {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+  /* Mapa */
+  .mapa__seccion__mapa--tamanio {
+    width: 300px;
+    height: 500px;
+  }
+  /* Locales */
+  .articulo-locales-suramerica, .articulo-locales-europa, .articulo-locales-asia {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /* Recetas */
+  #video_receta {
+    width: 400px;
+    height: 300px;
+  }
+  /* Contacto */
+  form {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
